@@ -1,8 +1,8 @@
 <?php
 
-namespace ReservaDelNorte\IxpanditCbuValidator;
+namespace Ixpandit\IxpanditCbuValidator;
 
-use ReservaDelNorte\IxpanditCbuValidator\CbuValidatorAdapter;
+use Ixpandit\IxpanditCbuValidator\CbuValidatorAdapter;
 
 class CbuValidatorService {
 

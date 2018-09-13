@@ -1,6 +1,6 @@
 <?php
 
-namespace ReservaDelNorte\IxpanditCbuValidator;
+namespace Ixpandit\IxpanditCbuValidator;
 
 use Ixudra\Curl\Facades\Curl;
 

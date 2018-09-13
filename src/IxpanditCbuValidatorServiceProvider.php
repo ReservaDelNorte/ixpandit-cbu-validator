@@ -1,9 +1,9 @@
 <?php 
 
-namespace ReservaDelNorte\IxpanditCbuValidator;
+namespace Ixpandit\IxpanditCbuValidator;
 
 use Illuminate\Support\ServiceProvider;
-use ReservaDelNorte\IxpanditCbuValidator\CbuValidatorService;
+use Ixpandit\IxpanditCbuValidator\CbuValidatorService;
 
 class IxpanditCbuValidatorServiceProvider extends ServiceProvider
 {
