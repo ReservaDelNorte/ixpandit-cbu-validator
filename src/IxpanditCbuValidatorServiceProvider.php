@@ -4,6 +4,7 @@ namespace Ixpandit\IxpanditCbuValidator;
 
 use Illuminate\Support\ServiceProvider;
 use Ixpandit\IxpanditCbuValidator\CbuValidatorService;
+use Ixpandit\IxpanditCbuValidator\CbuValidatorAdapter;
 
 class IxpanditCbuValidatorServiceProvider extends ServiceProvider
 {
@@ -17,7 +18,7 @@ class IxpanditCbuValidatorServiceProvider extends ServiceProvider
 		$this->app['validator']->extend('ixpandit_cbu', function ($attribute, $value, $parameter, $validator)
 		{
 			$data = $validator->getData();
-			$cbuValidatorService = new CbuValidatorService();
+			$cbuValidatorService = new CbuValidatorService(new CbuValidatorAdapter());
 			$validate = $cbuValidatorService->validate($data['cbu'], $data['uniqueIdentifier']);
 
 			return $validate['validated'];
