@@ -1,0 +1,37 @@
+{
+    "name": "ReservaDelNorte/laravel-ixpandit-cbu-validator",
+    "description": "Ixpandit Cbu Validator for Laravel 5",
+    "keywords": [
+        "mrodriguez777",
+        "argentina",
+        "cbu",
+        "validator",
+        "laravel"
+    ],
+    "homepage": "https://github.com/ReservaDelNorte/ixpandit-cbu-validator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ignacio Mariano Gonzalez",
+            "email": "ignaciom.gonzalez@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : ">=5.6.0|>=7.0",
+        "illuminate/support": "~5.3.28|~5.4|~5.5",
+				"ixudra/curl": "^6.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "ReservaDelNorte\\IxpanditCbuValidator\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ReservaDelNorte\\IxpanditCbuValidator\\IxpanditCbuValidatorServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
