@@ -7,13 +7,13 @@ Ixpandit CBU Validator for Laravel 5
 Via Composer
 
 ``` bash
-$ composer require mrodriguez777/laravel-ixpandit-cbu-validator
+$ composer require reservadelnorte/laravel-ixpandit-cbu-validator
 ```
 
 Set providers in app/config.php
 ``` php
 'providers' => [
-    Mrodriguez777\IxpanditCbuValidator\IxpanditCbuValidatorServiceProvider::class,
+    Ixpandit\IxpanditCbuValidator\IxpanditCbuValidatorServiceProvider::class,
 ]
 ```
 
