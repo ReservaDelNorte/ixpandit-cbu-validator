@@ -7,7 +7,7 @@ Ixpandit CBU Validator for Laravel 5
 Via Composer
 
 ``` bash
-$ composer require reservadelnorte/laravel-ixpandit-cbu-validator dev-master
+$ composer require reservadelnorte/laravel-ixpandit-cbu-validator
 ```
 
 Set providers in app/config.php

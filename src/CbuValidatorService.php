@@ -15,7 +15,9 @@ class CbuValidatorService {
 
 	public function validate($cbu, $cuil)
 	{
-		if (!$cbuValidatorService = $this->cbuValidatorAdapter->validate($cbu, $cuil))
+		$cbuValidatorService = $this->cbuValidatorAdapter->validate($cbu, $cuil);
+
+		if (!$cbuValidatorService)
 		{
 			return ['validated' => false, 'message' => "Hubo un problema, por favor contactanos"];
 		}
@@ -42,7 +44,7 @@ class CbuValidatorService {
 		
 		if ($cbuValidatorService->message == "ACTIVE")
 		{
-			return ['validated' => true];
+			return ['validated' => true, 'data' => $cbuValidatorService->data];
 		}
 
 		return ['validated' => false, 'message' => "Hubo un problema, por favor contactanos"];
