@@ -44,7 +44,7 @@ class CbuValidatorService {
 		
 		if ($cbuValidatorService->message == "ACTIVE")
 		{
-			return ['validated' => true, 'data' => $cbuValidatorService->data];
+			return ['validated' => true, 'type' => $cbuValidatorService->data->type];
 		}
 
 		return ['validated' => false, 'message' => "Hubo un problema, por favor contactanos"];
