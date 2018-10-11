@@ -21,17 +21,17 @@ class CbuValidatorService {
 		{
 			return ['validated' => false, 'message' => "Hubo un problema, por favor contactanos"];
 		}
-		
+
 		if ($cbuValidatorService->message == "NO_MATCH")
 		{
 			return ['validated' => false, 'message' => "El CBU ingresado no corresponde con el DNI de la solicitud, verifique el CBU e intente nuevamente."];
 		}
-		
+
 		if ($cbuValidatorService->message == "NO_ACTIVE")
 		{
 			return ['validated' => false, 'message' => "El CBU ingresado no se encuentra activo, verifique el CBU e intente nuevamente."];
 		}
-		
+
 		if ($cbuValidatorService->message == "NOT_FOUND")
 		{
 			return ['validated' => false, 'message' => "El CBU ingresado no se encuentra activo, verifique el CBU e intente nuevamente."];
@@ -41,10 +41,10 @@ class CbuValidatorService {
 		{
 			return ['validated' => false, 'message' => "Hubo un problema, por favor contactanos"];
 		}
-		
+
 		if ($cbuValidatorService->message == "ACTIVE")
 		{
-			return ['validated' => true, 'type' => $cbuValidatorService->data->type];
+			return ['validated' => true, 'type' => $cbuValidatorService->data->type, 'owners' => $cbuValidatorService->data->owners];
 		}
 
 		return ['validated' => false, 'message' => "Hubo un problema, por favor contactanos"];
