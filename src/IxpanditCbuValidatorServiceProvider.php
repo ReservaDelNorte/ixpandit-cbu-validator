@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Ixpandit\IxpanditCbuValidator;
 
@@ -25,7 +25,15 @@ class IxpanditCbuValidatorServiceProvider extends ServiceProvider
 			{
 				$validator->setFallbackMessages([
 					'ixpandit_cbu' => "El CBU ingresado corresponde a una Cuenta Corriente."
-				]);	
+				]);
+				return false;
+			}
+
+			if($validate['owners'] && $validate['owners'] > 1)
+			{
+				$validator->setFallbackMessages([
+					'ixpandit_cbu' => "El CBU ingresado tiene más de un titular."
+				]);
 				return false;
 			}
 
@@ -33,12 +41,12 @@ class IxpanditCbuValidatorServiceProvider extends ServiceProvider
 			{
 				$validator->setFallbackMessages([
 					'ixpandit_cbu' => $validate['message']
-				]);	
+				]);
 			}
 
 			return $validate['validated'];
 		});
-		
+
 		$this->app['validator']->replacer('ixpandit_cbu', function ($message, $attribute, $rule, $parameters) {
 			return $message;
 		});
