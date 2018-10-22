@@ -29,7 +29,7 @@ class IxpanditCbuValidatorServiceProvider extends ServiceProvider
 				return false;
 			}
 
-			if($validate['owners'] && $validate['owners'] > 1)
+			if(isset($validate['owners']) && $validate['owners'] > 1)
 			{
 				$validator->setFallbackMessages([
 					'ixpandit_cbu' => "El CBU ingresado tiene más de un titular."
