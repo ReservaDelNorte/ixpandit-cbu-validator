@@ -46,6 +46,11 @@ class CbuValidatorService {
 		{
 			return ['validated' => true, 'type' => $cbuValidatorService->data->type, 'owners' => $cbuValidatorService->data->owners];
 		}
+		
+		if ($cbuValidatorService->message == "API_BANK_ERROR")
+		{
+			return ['validated' => false, 'message' => "Hubo un problema, por favor contactanos", 'error' => "API_BANK_ERROR"];
+		}
 
 		return ['validated' => false, 'message' => "Hubo un problema, por favor contactanos"];
 	}
